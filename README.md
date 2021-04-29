@@ -4,6 +4,7 @@
 bla bla bla bla
 # 2- Modelo E-R
 bla bla bla bla
+![Alt text](imagens/bd.png  "Title")
 ## 2.1- Descrição da BD
 bla bla bla
 ## 2.2- Entidades-tipo
