@@ -162,7 +162,7 @@ Auxiliamos profissionais de saúde a conseguirem mais pacientes através da tecn
 Criamos os sites médicos mais fantásticos que você já viu, sistema de agendamento online pelo paciente, tudo integrado ao software e em tempo real, acessível de qualquer lugar que tenha uma conexão com a internet.
 
 Experimente o prontuário eletrônico gratuito iMedicina e mantenha seu consultório ou clínica com tecnologias de ponta focadas no seu paciente! Para se cadastrar basta ter um e-mail válido e não é necessário cartão de crédito!
-![Alt text](imagens/cm.JPG "Title")
+![Alt text](imagens/cm.PNG"Title")
 
 
 # 2- Modelo E-R:
