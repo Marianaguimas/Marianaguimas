@@ -1,7 +1,7 @@
 
 # Mariana guimas database
 # 1- Descrição do Trabalho:
-Se você pretende abrir consultórios, um centro médico ou prestar serviços para alguma instituição deve tomar algumas decisões importantes. Uma delas é entender  o que é cada tipo de estabelecimento.
+Se pretendermos abrir consultórios, um centro médico ou prestar serviços para alguma instituição deve tomar algumas decisões importantes. Uma delas é entender  o que é cada tipo de estabelecimento.
 
 Nesta hora, é essencial saber a diferença entre consultórios, clinicas e centros médicos.
 
