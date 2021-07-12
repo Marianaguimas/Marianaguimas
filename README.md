@@ -223,10 +223,188 @@ c. Cada consulta é realizada para um paciente. Um paciente pode realizar muitas
 # 3- Exemplos de uso da syntax dos comandos SQL:
 
 ## 3-1 Geral:
+SELECT - extrai dados de um banco de dados
+UPDATE - atualiza dados em um banco de dados
+DELETE - exclui dados de um banco de dados
+INSERT INTO - insere novos dados em um banco de dados
+CREATE DATABASE - cria um novo banco de dados
+ALTER DATABASE - modifica um banco de dados
+CREATE TABLE - cria uma nova mesa
+ALTER TABLE - modifica uma mesa
+DROP TABLE - apaga uma mesa
+CREATE INDEX - cria um índice (chave de pesquisa)
+DROP INDEX - exclui um índice
+
 
 ## 3-2 SQL Server/Oracle/ MS Access:
+Funções de string do SQL Server
+Function	Description
+ASCII	Returns the ASCII value for the specific character
+CHAR	Returns the character based on the ASCII code
+CHARINDEX	Returns the position of a substring in a string
+CONCAT	Adds two or more strings together
+Concat with +	Adds two or more strings together
+CONCAT_WS	Adds two or more strings together with a separator
+DATALENGTH	Returns the number of bytes used to represent an expression
+DIFFERENCE	Compares two SOUNDEX values, and returns an integer value
+FORMAT	Formats a value with the specified format
+LEFT	Extracts a number of characters from a string (starting from left)
+LEN	Returns the length of a string
+LOWER	Converts a string to lower-case
+LTRIM	Removes leading spaces from a string
+NCHAR	Returns the Unicode character based on the number code
+PATINDEX	Returns the position of a pattern in a string
+QUOTENAME	Returns a Unicode string with delimiters added to make the string a valid SQL Server delimited identifier
+REPLACE	Replaces all occurrences of a substring within a string, with a new substring
+REPLICATE	Repeats a string a specified number of times
+REVERSE	Reverses a string and returns the result
+RIGHT	Extracts a number of characters from a string (starting from right)
+RTRIM	Removes trailing spaces from a string
+SOUNDEX	Returns a four-character code to evaluate the similarity of two strings
+SPACE	Returns a string of the specified number of space characters
+STR	Returns a number as string
+STUFF	Deletes a part of a string and then inserts another part into the string, starting at a specified position
+SUBSTRING	Extracts some characters from a string
+TRANSLATE	Returns the string from the first argument after the characters specified in the second argument are translated into the characters specified in the third argument.
+TRIM	Removes leading and trailing spaces (or other specified characters) from a string
+UNICODE	Returns the Unicode value for the first character of the input expression
+UPPER	Converts a string to upper-case
+PROPAGANDA	
+Funções matemáticas / numéricas do SQL Server
+Function	Description
+ABS	Returns the absolute value of a number
+ACOS	Returns the arc cosine of a number
+ASIN	Returns the arc sine of a number
+ATAN	Returns the arc tangent of a number
+ATN2	Returns the arc tangent of two numbers
+AVG	Returns the average value of an expression
+CEILING	Returns the smallest integer value that is >= a number
+COUNT	Returns the number of records returned by a select query
+COS	Returns the cosine of a number
+COT	Returns the cotangent of a number
+DEGREES	Converts a value in radians to degrees
+EXP	Returns e raised to the power of a specified number
+FLOOR	Returns the largest integer value that is <= to a number
+LOG	Returns the natural logarithm of a number, or the logarithm of a number to a specified base
+LOG10	Returns the natural logarithm of a number to base 10
+MAX	Returns the maximum value in a set of values
+MIN	Returns the minimum value in a set of values
+PI	Returns the value of PI
+POWER	Returns the value of a number raised to the power of another number
+RADIANS	Converts a degree value into radians
+RAND	Returns a random number
+ROUND	Rounds a number to a specified number of decimal places
+SIGN	Returns the sign of a number
+SIN	Returns the sine of a number
+SQRT	Returns the square root of a number
+SQUARE	Returns the square of a number
+SUM	Calculates the sum of a set of values
+TAN	Returns the tangent of a number
+Funções de data do SQL Server
+Function	Description
+CURRENT_TIMESTAMP	Returns the current date and time
+DATEADD	Adds a time/date interval to a date and then returns the date
+DATEDIFF	Returns the difference between two dates
+DATEFROMPARTS	Returns a date from the specified parts (year, month, and day values)
+DATENAME	Returns a specified part of a date (as string)
+DATEPART	Returns a specified part of a date (as integer)
+DAY	Returns the day of the month for a specified date
+GETDATE	Returns the current database system date and time
+GETUTCDATE	Returns the current database system UTC date and time
+ISDATE	Checks an expression and returns 1 if it is a valid date, otherwise 0
+MONTH	Returns the month part for a specified date (a number from 1 to 12)
+SYSDATETIME	Returns the date and time of the SQL Server
+YEAR	Returns the year part for a specified date
+Funções avançadas do SQL Server
+Function	Description
+CAST	Converts a value (of any type) into a specified datatype
+COALESCE	Returns the first non-null value in a list
+CONVERT	Converts a value (of any type) into a specified datatype
+CURRENT_USER	Returns the name of the current user in the SQL Server database
+IIF	Returns a value if a condition is TRUE, or another value if a condition is FALSE
+ISNULL	Return a specified value if the expression is NULL, otherwise return the expression
+ISNUMERIC	Tests whether an expression is numeric
+NULLIF	Returns NULL if two expressions are equal
+SESSION_USER	Returns the name of the current user in the SQL Server database
+SESSIONPROPERTY	Returns the session settings for a specified option
+SYSTEM_USER	Returns the login name for the current user
+USER_NAME	Returns the database user name based on the specified id
 
 ## 3-3 MySQL:
+Function	Description
+Asc	Returns the ASCII value for the specific character
+Chr	Returns the character for the specified ASCII number code
+Concat with &	Adds two or more strings together
+CurDir	Returns the full path for a specified drive
+Format	Formats a value with the specified format
+InStr	Gets the position of the first occurrence of a string in another
+InstrRev	Gets the position of the first occurrence of a string in another, from the end of string
+LCase	Converts a string to lower-case
+Left	Extracts a number of characters from a string (starting from left)
+Len	Returns the length of a string
+LTrim	Removes leading spaces from a string
+Mid	Extracts some characters from a string (starting at any position)
+Replace	Replaces a substring within a string, with another substring, a specified number of times
+Right	Extracts a number of characters from a string (starting from right)
+RTrim	Removes trailing spaces from a string
+Space	Returns a string of the specified number of space characters
+Split	Splits a string into an array of substrings
+Str	Returns a number as string
+StrComp	Compares two strings
+StrConv	Returns a converted string
+StrReverse	Reverses a string and returns the result
+Trim	Removes both leading and trailing spaces from a string
+UCase	Converts a string to upper-case
+PROPAGANDA	
+Funções numéricas do MS Access
+Function	Description
+Abs	Returns the absolute value of a number
+Atn	Returns the arc tangent of a number
+Avg	Returns the average value of an expression
+Cos	Returns the cosine of an angle
+Count	Returns the number of records returned by a select query
+Exp	Returns e raised to the power of a specified number
+Fix	Returns the integer part of a number
+Format	Formats a numeric value with the specified format
+Int	Returns the integer part of a number
+Max	Returns the maximum value in a set of values
+Min	Returns the minimum value in a set of values
+Randomize	Initializes the random number generator (used by Rnd()) with a seed
+Rnd	Returns a random number
+Round	Rounds a number to a specified number of decimal places
+Sgn	Returns the sign of a number
+Sqr	Returns the square root of a number
+Sum	Calculates the sum of a set of values
+Val	Reads a string and returns the numbers found in the string
+Funções de Data do MS Access
+Function	Description
+Date	Returns the current system date
+DateAdd	Adds a time/date interval to a date and then returns the date
+DateDiff	Returns the difference between two dates
+DatePart	Returns a specified part of a date (as an integer)
+DateSerial	Returns a date from the specified parts (year, month, and day values)
+DateValue	Returns a date based on a string
+Day	Returns the day of the month for a given date
+Format	Formats a date value with the specified format
+Hour	Returns the hour part of a time/datetime
+Minute	Returns the minute part of a time/datetime
+Month	Returns the month part of a given date
+MonthName	Returns the name of the month based on a number
+Now	Returns the current date and time based on the computer's system date and time
+Second	Returns the seconds part of a time/datetime
+Time	Returns the current system time
+TimeSerial	Returns a time from the specified parts (hour, minute, and second value)
+TimeValue	Returns a time based on a string
+Weekday	Returns the weekday number for a given date
+WeekdayName	Returns the weekday name based on a number
+Year	Returns the year part of a given date
+MS Access algumas outras funções
+Function	Description
+CurrentUser	Returns the name of the current database user
+Environ	Returns a string that contains the value of an operating system environment variable
+IsDate	Checks whether an expression can be converted to a date
+IsNull	Checks whether an expression contains Null (no data)
+IsNumeric	Checks whether an expression is a valid number
 
 # 4- Conclusão:
 A Medicina moderna, suas organizações e profissionais, geram quantidades
@@ -287,6 +465,7 @@ secretária e o médico é de extrema necessidade, de modo a agilizar a comunica
 profissionais.
 
 # 5- Bibliografia:
+https://www.w3schools.com/sql/sql_ref_msaccess.asp
 https://blog.imedicina.com.br/diferenca-entre-consultorios-clinicas-e-centros-medicos/
 ANDRADE, Gilberto K.; AUDY, Jorge L.N.; CIDRAL, Alexandre. Fundamentos de
 sistemas de informação. Porto Alegre: Bookman, 2005.
