@@ -166,11 +166,15 @@ Experimente o prontuário eletrônico gratuito iMedicina e mantenha seu consult�
 
 
 # 2- Modelo E-R:
-bla bla bla bla
+
 ![Alt text](imagens/bd.PNG "Title")
 
 ## 2.1- Descrição da BD:
-bla bla bla
+O objetivo do presente trabalho foi desenvolver um sistema para o gerenciamento
+mais eficaz de clínicas médicas. Com o controle dos agendamentos das consultas médicas, a
+manutenção do histórico de cada paciente através do PEP, da geração de relatórios de consulta
+para análise mediante aplicação web e outras funcionalidades, visam facilitar e aprimorar a
+gestão da Clínica Maria Auxiliadora.
 
 ## 2.2- Entidades-tipo:
 As entidades-tipo, deste consultório médico, são:
@@ -212,10 +216,9 @@ Cada consulta é realizada por um médico. Um médico realiza muitas consultas.
 c. Cada consulta é realizada para um paciente. Um paciente pode realizar muitas consultas.
 
 ## 2.6 Modelo Lógico:
-bla bla
 
 ## 2.7 Modelo Relacional:
-bla bla
+
 
 # 3- Exemplos de uso da syntax dos comandos SQL:
 
@@ -226,8 +229,96 @@ bla bla
 ## 3-3 MySQL:
 
 # 4- Conclusão:
-Bla bla bla
+A Medicina moderna, suas organizações e profissionais, geram quantidades
+significativas de informação à medida que exercem suas atividades. 
+Tais dados demandam
+cuidados e controle constante, sobretudo com a demanda crescente por serviços na área da
+saúde. 
+A utilização de sistemas de informação, em substituição aos sistemas arcaicos
+(manuscritos), permite dar maior celeridade aos procedimentos realizados diariamente e
+assegura uma melhor guarda das informações produzidas.
+Em observância a tais questões, no presente trabalho propôs-se o desenvolvimento de
+um sistema com o objetivo de melhor gerenciar as consultas médicas, de maneira a padronizar
+e facilitar o controle das atividades da Clínica Maria Auxiliadora da cidade de Presidente
+Getúlio (Santa Catarina).
+A análise da questão determinou que quatro objetivos específicos deveriam ser
+atingidos para solucionar ou minimizar algumas dificuldades constatadas na clínica. São eles:
+a) permitir a visualização em tempo real do status das consultas; 
+b) manter o histórico de cada
+paciente; 
+c) gerar relatórios de consultas e; 
+d) evitar conflitos entre uma consulta nova e um
+retorno.
+Foram utilizadas diversas linguagens de programação para o desenvolvimento do
+sistema, entre eles PHP, HTML, JavaScript e CSS. Procedeu-se de tal modo para extrair das
+linguagens suas qualidades e, assim, elaborar o sistema de forma satisfatória para atingir o
+objetivo proposto.
+Durante o desenvolvimento do sistema foram constatadas algumas dificuldades. 
+Entre
+elas pode-se citar a organização do leiaute, em razão da necessidade de ser de fácil utilização
+e maneabilidade. 
+Também, na implementação do prontuário eletrônico devido aos inúmeros
+relacionamentos entre as informações, tais como procedimentos e medicamentos.
+Contudo, o sistema elaborado atende às necessidades da clínica médica, ao menos em
+um primeiro momento, e corresponde satisfatoriamente aos objetivos do presente trabalho.
+Investir na informatização e gerenciamento de clínicas médicas, mediante o uso de
+sistemas de informação orientados às necessidades da área da saúde é questão essencial na
+atualidade. 
+O elevado fluxo de dados produzido e a demanda crescente por serviços na
+referida área determinam a importância de um gerenciamento eficiente.
+
+Para dar continuidade e aprimorar o sistema, pode-se desenvolver a comunicação entre
+o sistema e as operadoras de convênio. Dessa forma, a autorização dos planos de saúde para
+os procedimentos e consultas seria mais eficiente e, consequentemente, o tempo de aguardo
+do paciente na sala de espera seria menor.
+Implementar lembretes enviados via SMS aos pacientes, com a data da consulta e com
+o médico que realizará o atendimento, pode reduzir o número de atrasos e/ou faltas dos
+pacientes às consultas.
+Outro melhoramento que pode ser implantado refere-se à possibilidade de realizar a
+importação de planilhas em formato CSV no que diz respeito ao CID-10, procedimentos
+médicos e índice de remédios pelo próprio sistema sem a necessidade de intervenção do
+administrador.
+Para facilitar a geração do receituário, modificação interessante poderia corresponder à
+possibilidade de o médico selecionar os itens que compõem a prescrição, tais como remédio,
+posologia, entre outros, e gerar o receituário em formato PDF. Assim, o único trabalho
+manuscrito do médico seria assinar o receituário.
+Por fim, implementar um comunicador integrado ao sistema para conversas entre a
+secretária e o médico é de extrema necessidade, de modo a agilizar a comunicação entre os
+profissionais.
 
 # 5- Bibliografia:
 https://blog.imedicina.com.br/diferenca-entre-consultorios-clinicas-e-centros-medicos/
+ANDRADE, Gilberto K.; AUDY, Jorge L.N.; CIDRAL, Alexandre. Fundamentos de
+sistemas de informação. Porto Alegre: Bookman, 2005.
+GUIA FARMACÊUTICO BRASÍNDICE. Revista Brasíndice, São Paulo, n. 637, 2012,
+Disponível em: <http://www.brasindice.com.br/brasindice/download/brasindicetiss.zip>.
+Acesso em: 12 out. 2012.
+CARNEIRO, Leandra L. R.. Prontuário eletrônico do paciente. [S.l.], 2009. Disponível
+em: <http://timedicina.blogspot.com.br/2009/01/pronturio-eletronico-do-paciente.html>.
+Acesso em: 11 set. 2012.
+CENTRO BRASILEIRO DE CLASSIFICAÇÃO DE DOENÇAS. CID-10: Classificação
+Internacional de Doenças. São Paulo: Edusp, 2007. Disponível em:
+<http://www.datasus.gov.br/cid10/v2008/webhelp/cid10.htm>. Acesso em: 15 abr. 2012.
+CENTRALX. HiDoctor: consultórios médicos inteligentes. Desenvolve e comercializa
+sistemas para ambientes médicos. [S.l.], 2012. Disponível em:
+<http://www.hidoctor.com.br/docs/?C=A&V=66506F737449443D3537313435266163743D7
+0>. Acesso em: 10 abr. 2012.
+CONSELHO FEDERAL DE MEDICINA. Define prontuário médico e torna obrigatória a
+criação da Comissão de Revisão de Prontuários nas instituições de saúde. Brasília, 2002.
+Resolução n. 1.638, de 10 de julho de 2002. Publicada no D.O.U. de 9 de agosto de 2002,
+Seção I, p. 184-5. Disponível em:
+http://www.portalmedico.org.br/resolucoes/cfm/2002/1638_2002.htm. Acesso em: 01 set.
+2012.
+FEDERAÇÃO BRASILEIRA DE HOSPITAIS (Brasil) (Ed.). Hospitais no país. Brasília,
+2012. Disponível em: <http://fbh.com.br/2011/06/06/hospitais-no-pais/>. Acesso em: 27 ago.
+2012.
+FEDERAÇÃO BRASILEIRA DE HOSPITAIS (Brasil) (Ed.). Leitos de hospitais. Brasília,
+2012a. Disponível em: <http://fbh.com.br/2011/06/06/leitos-de-hospitais/>. Acesso em: 27
+ago. 2012.
+FUNDAÇÃO CESP (Brasil). Classificação Brasileira Hierarquizada de Procedimentos
+Médicos. São Paulo, 2009. Disponível em:
+<http://www.prevcesp.com.br/publisher/MostraAnexo?anexoId=MlJ2R25NV18wVHZQcUV
+pbVFNd2czVGxJUG1hSUQ9MzY0ODE%3D>. Acesso em: 15 out. 2012.
+GORDON, Steven R; GORDON, Judith R. Sistemas de informação: uma abordagem
+gerencial. 3. ed. Rio de Janeiro: LTC, 2006.
 
