@@ -215,12 +215,379 @@ b. CONSULTAS(MEDICO, PACIENTE)
 Cada consulta é realizada por um médico. Um médico realiza muitas consultas.
 c. Cada consulta é realizada para um paciente. Um paciente pode realizar muitas consultas.
 
-## 2.6 Modelo Lógico:
+## 2.6 Modelo Lógico ou fisico:
+create database cosultoriomedico;
+
+use consultoriomedico;
+
+create table paciente2 (
+    id int primary key,
+    morada char(11) not null,
+    idade varchar(30) not null,
+    nome varchar(255) not null,
+    genero varchar(255) not null,
+    datadenascimento varchar(20) not null
+);
+
+select * from paciente2;
+
+insert into paciente2 (id,morada,idade,nome,genero,datadenascimento)
+values (1,'belmonte','20','Maria','feminino',27-07-2001);
+ 
+
+create table enfermeiro(
+    id int auto_increment,
+    cpf char(11) not null,
+    Coren varchar(20) not null,
+    nome varchar(255) not null,
+    primary key(id)
+);
+
+select * from paciente2;
+
+insert into paciente2 (id,morada,idade,nome,genero,datadenascimento)
+values (1,'belmonte','20','Maria','feminino',27-07-2001);
+
+
+create table triagem(
+    id int auto_increment,
+    data_triagem timestamp default current_timestamp, 
+    peso double not null,
+    pressao varchar(10) not null,
+    tempertura double not null,
+    id_paciente int not null,
+    id_enfermeiro int not null,
+    foreign key (id_paciente) references paciente(id), 
+	foreign key (id_enfermeiro) references enfermeiro(id), 
+    primary key (id)
+);
+
+select * from paciente2;
+
+insert into paciente2 (id,morada,idade,nome,genero,datadenascimento)
+values (1,'belmonte','20','Maria','feminino',27-07-2001);
+
+
+create table especialidades (
+    id int auto_increment,
+    descricao varchar(150) not null,
+    primary key (id)
+);
+
+select * from paciente2;
+
+insert into paciente2 (id,morada,idade,nome,genero,datadenascimento)
+values (1,'belmonte','20','Maria','feminino',27-07-2001);
+
+
+create table medico (
+    id int auto_increment,
+    crm varchar(20) not null,
+    cpf char(11) not null,
+    nome varchar(255) not null,
+    primary key (id)
+);  
+
+select * from paciente2;
+
+insert into paciente2 (id,morada,idade,nome,genero,datadenascimento)
+values (1,'belmonte','20','Maria','feminino',27-07-2001);
+
+
+create table medico_especialidade (
+    id_medico int not null,
+    id_especialidade int not null,
+    foreign key (id_medico) references medico(id),
+    foreign key (id_especialidade) references especialidade(id),
+    primary key (id_medico, id_especialidade)
+);   
+
+select * from paciente2;
+
+insert into paciente2 (id,morada,idade,nome,genero,datadenascimento)
+values (1,'belmonte','20','Maria','feminino',27-07-2001);
+                  
+
+create table consulta(
+    id int auto_increment,
+    data_consulta timestamp not null default current_timestamp,
+    id_medico int not null,
+    id_triagem int not null,
+	foreign key (id_medico) references medico(id),
+    foreign key (id_triagem) references triagem(id),
+    primary key (id)
+); 
+
+select * from paciente2;
+
+insert into paciente2 (id,morada,idade,nome,genero,datadenascimento)
+values (1,'belmonte','20','Maria','feminino',27-07-2001);
+                    
+
+create table farmaceutico (
+   id int auto_increment,
+   nome varchar(255) not null,
+   cpf char(11) not null,
+   crf varchar(30) not null,
+   primary key (id)
+);
+
+select * from paciente2;
+
+insert into paciente2 (id,morada,idade,nome,genero,datadenascimento)
+values (1,'belmonte','20','Maria','feminino',27-07-2001);
+
+
+create table medicamento(
+   id int auto_increment,
+   descricao varchar(150) not null,
+   dosagem varchar(15) not null,
+   apresentacao varchar(150) not null,
+   primary key (id)
+);
+
+select * from paciente2;
+
+insert into paciente2 (id,morada,idade,nome,genero,datadenascimento)
+values (1,'belmonte','20','Maria','feminino',27-07-2001);
+
+
+create table quarto(
+   id int auto_increment,
+   numero int not null,
+   primary key (id)
+);
+
+select * from paciente2;
+
+insert into paciente2 (id,morada,idade,nome,genero,datadenascimento)
+values (1,'belmonte','20','Maria','feminino',27-07-2001);
+
+create table internacao (
+   id int auto_increment,
+   data_entrada datetime not null default now(),
+   data_saida date,
+   id_quarto int not null,
+   id_consulta int not null,
+   primary key (id)
+);
+
+select * from paciente2;
+
+insert into paciente2 (id,morada,idade,nome,genero,datadenascimento)
+values (1,'belmonte','20','Maria','feminino',27-07-2001);
+
+
+create table evolucao (
+   id int auto_increment,
+    descricao text not null,
+    data_evolucao timestamp not null default current_timestamp,
+    id_internacao int not null,
+    id_medico int not null,
+    foreign key (id_internacao) references internacao(id),
+    foreign key (id_medico) references medico(id),
+    primary key (id)
+);
+
+select * from paciente2;
+
+insert into paciente2 (id,morada,idade,nome,genero,datadenascimento)
+values (1,'belmonte','20','Maria','feminino',27-07-2001);
+
+
+
+create table receita (
+   id int auto_increment,
+   data_receita timestamp not null default current_timestamp,
+   id_enfermeiro int,
+   id_consulta int not null,
+   id_farmaceutico int,
+   id_evolucao int,
+   foreign key (id_enfermeiro) references enfermeiro(id),
+   foreign key (id_consulta) references consulta(id),
+   foreign key (id_farmaceutico) references farmaceutico(id),
+   foreign key (id_evolucao) references evolucao(id),
+   primary key (id)
+);
+
+select * from receita;
+
+insert into receita ()
+values (1,'belmonte','20','Maria','feminino',27-07-2001);
+
+
+create table receita_remedio (
+    id_receita int not null,
+    id_remedio int not null,
+    como_tomar varchar(255) not null,
+    foreign key (id_receita) references receita(id),
+    foreign key (id_remedio) references remedio(id),
+    primary key (id_receita, id_remedio)
+);   
+
+select * from receita_remedio;
+
+insert into receita_remedio (id_receita,id_remedio,com_tomar)
+values ('564756','54545','1 comprimido');
 
 ## 2.7 Modelo Relacional:
+INSERT INTO paciente (B.I.,morada, nome, idade, género) VALUES 
+					  ("6165165165","Porto","Antónia "," 55" ,"feminino"),
+                      ("5434534534","Gaia","Cristina","56","feminino"),
+                      ("5345345343","Beira interior"," José ", "66 " , "masculino "),
+                      ("4534535434","Algarve","Gabriel ", " 85" , "masculino "),
+                      ("5434534534","Minho","Afonso", " 57" , "masculino ");
 
+INSERT INTO farmaceutico (B.I,morada, nome, idade, género) VALUES
+						  ("45612346498","Belmonte","maria","27","feminino"),
+						  ("64651545562","Guarda","João "," 23","masculino"),
+                          ("43453453245","Viseu","Mariana ","20 ","feminino"),
+                          ("56375434563","Braga","Cláudia "," 23","feminino"),
+                          ("651551515158","Viana do Castelo","Cristiana","19 ","feminino");
+                      
+                      
+INSERT INTO medicamento (descrição, dosagem, apresentação) VALUES
+                    (" ", " ","  ", " " , " "),
+                      (" ", " ","  ", " " , " "),
+                      (" ", " ","  ", " " , " "),
+                      (" ", " ","  ", " " , " "),
+                      (" ", " ","  ", " " , " ");
+                      
+INSERT INTO quarto (numero)  VALUES (10, 20, 30, 40,50);
+                      
+                      
+INSERT INTO especialidade (descrição, tipo) VALUES ("Oftalmologia","Pediatria","Psiquiatria", "Geriatria","Biotecnologia");
+
+INSERT INTO enfermeiro (nome, idade, género) VALUES 
+                       ("Carmelinda","67","Feminino"),
+					   ("Gabriel","27 ","Masculino"),
+					    ("Fátima"," 57","Feminino"),
+						("Maria ","37","Feminino"),
+						("Diogo"," 27","Masculino");
+
+INSERT INTO medico ( nome, idade, género) VALUES
+                    ("Mariana", "20","Femenino"),
+					("Carla ", "47 ","Femenino"),
+					("Joana", "37 ","Femenino"),
+					("Cristiana", "19 ","Femenino"),
+					("Cristina", "57","Femenino");
+                    
+INSERT INTO medico_especialidade (id_especialidade, id_medico) VALUES 
+                                   (1,3),
+								   (3,1),
+								   (5,2),
+								   (4,4),
+								   (2,4);
+                    
+INSERT INTO triagem (id_paciente, id_enfermeiro, temperatura, pressao, peso, data_triagem) VALUES 
+                     (" ", " ","  ", " " , " "," "),
+					 (" ", " ","  ", " " , " "," "),
+					 (" ", " ","  ", " " , " "," "),
+                      (" ", " ","  ", " " , " "," "),
+                      (" ", " ","  ", " " , " "," ");
+                     
+INSERT INTO consulta (id_triagem, id_medico, data_consulta) VALUES (" "," "," ");
+
+INSERT INTO internacao (id_quarto, id_consulta, data_entrada, data_saída) VALUES (" "," "," "," ");
+
+INSERT INTO evolucao (id_medico, id_internacao, data_evolucao, descricao)  VALUES (" "," "," "," ");
+
+INSERT INTO receita (id_enfermeiro, id_consulta, id_evolucao, id_farmaceutico, data_receita) VALUES 
+                    (" ", " ","  ", " "," ");
+                    
+INSERT INTO medicamento(descricao, dosagem, apresentacao) VALUES
+				      ("Fenistil", "200mg ","Comprimido"),
+					 ("Omeprazol", "200mg ","Cápsula"),
+					 ("Piracetam ", "500mg ","Cápsula"),
+					 ("Rivastigmina", "170mg ","Comprimido"),
+					 ("Adenosina", "1 mil UI  ","Injetavél");
+                     
+INSERT INTO receita_remedio (id_remedio, id_receita) VALUES   (" ", " ");
+                    
 
 # 3- Exemplos de uso da syntax dos comandos SQL:
+Palavras-chave SQL
+Keyword	Description
+ADD	Adds a column in an existing table
+ADD CONSTRAINT	Adds a constraint after a table is already created
+ALTER	Adds, deletes, or modifies columns in a table, or changes the data type of a column in a table
+ALTER COLUMN	Changes the data type of a column in a table
+ALTER TABLE	Adds, deletes, or modifies columns in a table
+ALL	Returns true if all of the subquery values meet the condition
+AND	Only includes rows where both conditions is true
+ANY	Returns true if any of the subquery values meet the condition
+AS	Renames a column or table with an alias
+ASC	Sorts the result set in ascending order
+BACKUP DATABASE	Creates a back up of an existing database
+BETWEEN	Selects values within a given range
+CASE	Creates different outputs based on conditions
+CHECK	A constraint that limits the value that can be placed in a column
+COLUMN	Changes the data type of a column or deletes a column in a table
+CONSTRAINT	Adds or deletes a constraint
+CREATE	Creates a database, index, view, table, or procedure
+CREATE DATABASE	Creates a new SQL database
+CREATE INDEX	Creates an index on a table (allows duplicate values)
+CREATE OR REPLACE VIEW	Updates a view
+CREATE TABLE	Creates a new table in the database
+CREATE PROCEDURE	Creates a stored procedure
+CREATE UNIQUE INDEX	Creates a unique index on a table (no duplicate values)
+CREATE VIEW	Creates a view based on the result set of a SELECT statement
+DATABASE	Creates or deletes an SQL database
+DEFAULT	A constraint that provides a default value for a column
+DELETE	Deletes rows from a table
+DESC	Sorts the result set in descending order
+DISTINCT	Selects only distinct (different) values
+DROP	Deletes a column, constraint, database, index, table, or view
+DROP COLUMN	Deletes a column in a table
+DROP CONSTRAINT	Deletes a UNIQUE, PRIMARY KEY, FOREIGN KEY, or CHECK constraint
+DROP DATABASE	Deletes an existing SQL database
+DROP DEFAULT	Deletes a DEFAULT constraint
+DROP INDEX	Deletes an index in a table
+DROP TABLE	Deletes an existing table in the database
+DROP VIEW	Deletes a view
+EXEC	Executes a stored procedure
+EXISTS	Tests for the existence of any record in a subquery
+FOREIGN KEY	A constraint that is a key used to link two tables together
+FROM	Specifies which table to select or delete data from
+FULL OUTER JOIN	Returns all rows when there is a match in either left table or right table
+GROUP BY	Groups the result set (used with aggregate functions: COUNT, MAX, MIN, SUM, AVG)
+HAVING	Used instead of WHERE with aggregate functions
+IN	Allows you to specify multiple values in a WHERE clause
+INDEX	Creates or deletes an index in a table
+INNER JOIN	Returns rows that have matching values in both tables
+INSERT INTO	Inserts new rows in a table
+INSERT INTO SELECT	Copies data from one table into another table
+IS NULL	Tests for empty values
+IS NOT NULL	Tests for non-empty values
+JOIN	Joins tables
+LEFT JOIN	Returns all rows from the left table, and the matching rows from the right table
+LIKE	Searches for a specified pattern in a column
+LIMIT	Specifies the number of records to return in the result set
+NOT	Only includes rows where a condition is not true
+NOT NULL	A constraint that enforces a column to not accept NULL values
+OR	Includes rows where either condition is true
+ORDER BY	Sorts the result set in ascending or descending order
+OUTER JOIN	Returns all rows when there is a match in either left table or right table
+PRIMARY KEY	A constraint that uniquely identifies each record in a database table
+PROCEDURE	A stored procedure
+RIGHT JOIN	Returns all rows from the right table, and the matching rows from the left table
+ROWNUM	Specifies the number of records to return in the result set
+SELECT	Selects data from a database
+SELECT DISTINCT	Selects only distinct (different) values
+SELECT INTO	Copies data from one table into a new table
+SELECT TOP	Specifies the number of records to return in the result set
+SET	Specifies which columns and values that should be updated in a table
+TABLE	Creates a table, or adds, deletes, or modifies columns in a table, or deletes a table or data inside a table
+TOP	Specifies the number of records to return in the result set
+TRUNCATE TABLE	Deletes the data inside a table, but not the table itself
+UNION	Combines the result set of two or more SELECT statements (only distinct values)
+UNION ALL	Combines the result set of two or more SELECT statements (allows duplicate values)
+UNIQUE	A constraint that ensures that all values in a column are unique
+UPDATE	Updates existing rows in a table
+VALUES	Specifies the values of an INSERT INTO statement
+VIEW	Creates, updates, or deletes a view
+WHERE	Filters a result set to include only records that fulfill a specified condition
+
 
 ## 3-1 Geral:
 SELECT - extrai dados de um banco de dados
